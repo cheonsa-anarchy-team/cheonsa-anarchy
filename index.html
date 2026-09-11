@@ -703,7 +703,6 @@
     </div>
 
     <script>
-        // 서버 주소를 'cheonsa.m-c.kr'로 고정
         var SERVER_ADDRESS = 'cheonsa.m-c.kr';
         var PW = 'cheonsa1234';
         var MPW = 'Qweasd11!!';
@@ -815,7 +814,6 @@
             var n = eds();
             for (var i = 0; i < n.length; i++) n[i].setAttribute('contenteditable', 'true');
             
-            // 관리자 모드에서도 주소 변경은 막고 읽기 전용 유지
             var a = $('sad');
             a.setAttribute('readonly', '');
             
@@ -850,7 +848,7 @@
             for (var i = 0; i < n.length; i++) d.t.push(n[i].innerHTML.trim());
             var f = document.querySelector('[data-discord-link]');
             if (f) d.dc = f.href;
-            d.sa = SERVER_ADDRESS; // 저장 시에도 고정 주소 유지
+            d.sa = SERVER_ADDRESS;
             localStorage.setItem(K, JSON.stringify(d));
             ex();
             ap(d.sa);
